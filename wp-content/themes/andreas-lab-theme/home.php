@@ -31,7 +31,8 @@ get_header()
 										<i class="fa fa-user"></i> <?php the_author() ?>
 									</li>
 									<li>
-										<i class="fa fa-tag"></i><?php the_category() ?>
+										<i class="fa fa-tag"></i>
+											<?php the_category() ?>
 									</li>
 								</ul>
 								<p>

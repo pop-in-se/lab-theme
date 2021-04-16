@@ -25,10 +25,12 @@ get_header();
                                     </p>
 								</div>
                                 <aside id="secondary" class="col-xs-12 col-md-3 col-md-pull-9">
+                                <div class="side-menu">
                                         <?php
                                         get_sidebar();
                                         ?>
                                     </aside>
+</div>
 						</div>
 					</div>
 				</div>
