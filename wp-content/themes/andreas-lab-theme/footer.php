@@ -14,11 +14,8 @@
 					<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
 						<h4>Social media</h4>
 						<?php
-        				$menyarray = [
-            			'theme_location' => 'socialmediameny',
-        				];
-        				wp_nav_menu( $menyarray );
-   						?>
+						dynamic_sidebar('socialmediasidebar')
+						?>
 					</div>
 				</div>
 				<div class="row bottom">

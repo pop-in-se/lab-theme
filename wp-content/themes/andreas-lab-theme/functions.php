@@ -6,40 +6,49 @@ add_theme_support('menus');
 function register_my_menu(){
     register_nav_menu( 'huvudmeny', 'Meny toppen av sidan');
     register_nav_menu( 'socialmediameny', 'Sociala medier-meny längst ner');
-    register_nav_menu( 'hogermeny', 'Meny på höger sida');
     register_nav_menu( 'bloggmeny', 'Meny på höger sida på bloggen');
+    register_nav_menu( 'sidebarmeny', 'Meny på höger sida');
 }
 
 
 register_sidebar(
     [
-        'name' => 'BloggSidebar',
+        'name' => 'Blogg Sidebar',
         'Desription' => 'Sidebar på bloggsidan',
-        'id' => 'bloggsidebar'
+        'id' => 'bloggsidebar',
     ]
     );
 
 register_sidebar(
     [
-        'name' => 'SocialMediaBottomSidebar',
+        'name' => 'Social Media botten-sidebar',
         'Desription' => 'Social Media-länkar i botten',
-        'id' => 'socialmediasidebar'
+        'id' => 'socialmediasidebar',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+        'before_widget' => false,
     ]
     );
 
 register_sidebar(
     [
-        'name' => 'KontaktaOssSidebar',
+        'name' => 'Kontakta oss botten-sidebar',
         'Desription' => 'Kontakta oss i botten',
-        'id' => 'kontaktaosssidebar'
+        'id' => 'kontaktaosssidebar',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+        'before_widget' => false,
     ]
     );
 
 register_sidebar(
     [
-        'name' => 'OmOssSidebar',
+        'name' => 'Om oss botten-sidebar ',
         'Desription' => 'Om oss i botten',
-        'id' => 'omosssidebar'
+        'id' => 'omosssidebar',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+        'before_widget' => false,
     ]
     );
 
