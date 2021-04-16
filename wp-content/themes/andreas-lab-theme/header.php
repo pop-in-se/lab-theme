@@ -3,10 +3,13 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Labb 1</title>
-	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="<?= get_template_directory_uri(). '/assets/css/bootstrap.css' ?>">
+    <link rel="stylesheet" href="<?= get_template_directory_uri(). '/assets/css/font-awesome.css' ?>">
+    <link rel="stylesheet" href="<?= get_template_directory_uri(). '/style.css' ?>">
+	<script src="<?= get_template_directory_uri(). '/assets/js/jquery.js' ?>"></script>
+    <?=
+    wp_head();
+    ?>
 </head>
 <body>
 
@@ -21,9 +24,9 @@
 					<div class="col-sm-6 hidden-xs">
 						<form id="searchform" class="searchform">
 							<div>
-								<label class="screen-reader-text">Sök efter:</label>
-								<input type="text" />
-								<input type="submit" value="Sök" />
+							<?php
+							get_search_form()
+							?>
 							</div>
 						</form>
 					</div>
@@ -36,3 +39,32 @@
 				</div>
 			</div>
 		</header>
+
+		<div class="mobile-search">
+			<form id="searchform" class="searchform">
+				<div>
+					<?php
+				get_search_form()
+				?>
+				</div>
+			</form>
+		</div>
+
+		<nav id="nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<ul class="menu">
+							<li class="current-menu-item">
+							<?php
+        					$menyarray = [
+            				'theme_location' => 'huvudmeny',
+        					];
+        					wp_nav_menu( $menyarray );
+   							?>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
