@@ -18,10 +18,9 @@ get_header()
 							<img src="<?php the_post_thumbnail_url();?>">
 							
 							<h2 class="title">
-							<a href="<?php the_permalink();?>">
-                                    <?php
-                                    the_title();
-                                    ?></a>
+                                <?php
+                                the_title();
+                                ?>
 								</h2>
 								<ul class="meta">
 									<li>
@@ -42,6 +41,12 @@ get_header()
                                 the_content();
                                 ?>
                                 </p>
+
+                                <?php 
+                                get_avatar(2);
+                                the_author(); 
+                                ?>
+
 							</article>
 
 							<?php endwhile; else : endif; ?>
@@ -49,7 +54,7 @@ get_header()
 							<nav class="navigation pagination">
 								<h2 class="screen-reader-text">Inläggsnavigering</h2>
 								<?php
-								the_posts_pagination()
+								the_posts_pagination();
 								?>
 							</nav>
 						</div>
