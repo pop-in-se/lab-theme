@@ -52,7 +52,7 @@ register_sidebar(
     ]
     );
 
-
+/* add_image_size() */
 
 add_action('after_setup_theme', 'register_my_menu');
 
