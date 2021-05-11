@@ -42,11 +42,6 @@ get_header()
                                 ?>
                                 </p>
 
-                                <?php 
-                                get_avatar(2);
-                                the_author(); 
-                                ?>
-
 							</article>
 
 							<?php endwhile; else : endif; ?>
@@ -62,12 +57,39 @@ get_header()
 						<aside id="secondary" class="col-xs-12 col-md-3">
 							<div id="sidebar">
 								<ul>
-									<li class="page_item current_page_item">
-											
-									<?php
-									dynamic_sidebar('bloggsidebar');
+									<li>
+									<?php //Hämtar sökformuläret searchform.php 
+									get_search_form();
 									?>
 									</li>
+								</ul>
+								<ul role="navigation">
+									<li class="pagenav">
+										<h2>Sidor</h2>
+										<ul>
+														
+										<?php //Hämtar huvudmenyn 
+        					$bloggmenyarray = [
+								'theme_location' => 'bloggmeny',
+								'container'       => false,
+								'items_wrap'      => '%3$s',
+								'depth'           => 0,
+        					];
+        					wp_nav_menu( $bloggmenyarray );
+							?>
+										</ul>
+									</li>
+									<li>
+										
+										<ul>
+											<li>
+											<?php //Hämtar sidebarwidget
+							dynamic_sidebar('bloggsidebar');
+							?>		
+											</li>
+										</ul>
+									</li>
+									
 								</ul>
 							</div>
 						</aside>

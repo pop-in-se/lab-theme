@@ -25,9 +25,8 @@ get_header();
                                     </p>
 								</div>
                                 <aside id="secondary" class="col-xs-12 col-sm-4 col-md-6">
-                                <?php
-							    the_post_thumbnail();
-							    ?>
+                                <img src="<?php //Hämtar utvald bild i inlägget 
+										the_post_thumbnail_url();?>">
                                 </aside>
 						</div>
 					</div>

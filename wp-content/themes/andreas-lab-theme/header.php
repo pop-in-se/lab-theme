@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="<?= get_template_directory_uri(). '/assets/css/font-awesome.css' ?>">
     <link rel="stylesheet" href="<?= get_template_directory_uri(). '/style.css' ?>">
 	<script src="<?= get_template_directory_uri(). '/assets/js/jquery.js' ?>"></script>
-    <?=
+
+    <?= //Lägger in wp-adminbaren i toppen på sidan
     wp_head();
     ?>
 </head>
@@ -19,12 +20,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-8 col-sm-6">
-						<a class="logo" href="index.html">Labb 1</a>
+						<a class="logo" href="http://localhost:3500/lab-theme/">Labb 1</a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
 						<form id="searchform" class="searchform">
 							<div>
-							<?php
+							<?php //Hämtar searchform.php 
 							get_search_form()
 							?>
 							</div>
@@ -44,7 +45,7 @@
 			<form id="searchform" class="searchform">
 				<div>
 					<?php
-				get_search_form()
+				get_search_form();
 				?>
 				</div>
 			</form>
@@ -55,14 +56,14 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<ul class="menu">
-							<li class="current-menu-item">
-							<?php
+							
+							<?php //Hämtar huvudmenyn 
         					$menyarray = [
             				'theme_location' => 'huvudmeny',
         					];
         					wp_nav_menu( $menyarray );
    							?>
-							</li>
+							
 						</ul>
 					</div>
 				</div>
